@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">{{ toolbarService.title }}</mat-toolbar>
+
+<mat-sidenav-container class="main-container mat-typography">
+	<mat-sidenav mode="side" opened="true">
+		<mat-list class="mat-body-2">
+			<mat-list-item routerLink="/dashboard"><a>Dashboard</a></mat-list-item>
+			<mat-list-item routerLink="/heroes"><a>Heroes</a></mat-list-item>
+		</mat-list>
+	</mat-sidenav>
+	
+	<mat-sidenav-content>
+		<div>
+			<router-outlet></router-outlet>
+			<app-messages></app-messages>
+		</div>
+	</mat-sidenav-content>
+</mat-sidenav-container>
